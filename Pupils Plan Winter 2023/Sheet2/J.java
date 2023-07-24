@@ -22,7 +22,7 @@ public class J {
             }
 
             if(count0 == count1)
-                pw.println(0);
+                pw.println(count0-1);
             else if(count0 < count1)
                 pw.println(count0);
             else
