@@ -3,7 +3,7 @@ package Sheet3;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class F {
+public class F { //F - Infinite Sequence
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         PrintWriter pw = new PrintWriter(System.out);
@@ -12,10 +12,13 @@ public class F {
         long diff = sc.nextLong();
 
         try {
-            if (Math.abs(fav - first) % diff == 0)
-                pw.println("YES");
-            else
+            if (first > fav && diff > 0 || first < fav && diff < 0) {
                 pw.println("NO");
+            } 
+            else if (Math.abs(fav - first) % diff != 0)
+                pw.println("NO");
+            else
+                pw.println("YES");
         } catch (Exception e) {
             if (first == fav)
                 pw.println("YES");
