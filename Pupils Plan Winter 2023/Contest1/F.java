@@ -2,8 +2,8 @@ package Contest1;
 
 import java.io.PrintWriter;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
-import java.util.Set;
 
 public class F {
 
@@ -33,9 +33,8 @@ public class F {
             }
             long max = sum;
 
-            Set<Integer> h = hash.keySet();
-            for (Integer j : h) {
-                max = Math.max(sum - (j * hash.get(j)) + (x * hash.get(j)), max);
+             for (Map.Entry<Integer, Integer> entry : hash.entrySet()) {
+                max = Math.max(sum - (entry.getKey() * entry.getValue()) + (x * entry.getValue()), max);
             }
 
             pw.println(max);
