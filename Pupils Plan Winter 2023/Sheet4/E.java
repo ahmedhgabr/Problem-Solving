@@ -1,6 +1,5 @@
 package Sheet4;
 
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.Stack;
@@ -27,8 +26,8 @@ public class E {
                 s.push(loop * s.peek());
             } else if (curr0.equals("add")) {
                 output += s.peek();
-                if(output > Math.pow(2, 32) - 1)
-                    break ;
+                if (output > Math.pow(2, 32) - 1)
+                    break;
             } else { // end
                 s.pop();
             }
@@ -39,6 +38,5 @@ public class E {
 
         pw.flush();
     }
-
 
 }
