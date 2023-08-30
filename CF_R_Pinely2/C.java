@@ -45,7 +45,6 @@ public class C { //MEX Repetition
         for(int i=0;i<found.length;i++){
             if(!found[i]){
                 found[i] = true;
-                System.out.println(i);
                 return i;
             }
         }
