@@ -11,8 +11,5 @@ public class Number_of_1_Bits {
         return count;
      }
 
-     public static void main(String[] args) {
-            Number_of_1_Bits test = new Number_of_1_Bits();
-            System.out.println(test.hammingWeight(Integer.parseInt("11111111111111111111111111111101", 2)));
-     }
+     
 }

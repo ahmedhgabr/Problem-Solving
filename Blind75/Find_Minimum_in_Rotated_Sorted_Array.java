@@ -1,25 +1,31 @@
 public class Find_Minimum_in_Rotated_Sorted_Array {
 
+    public static void main(String[] args) {
+        Find_Minimum_in_Rotated_Sorted_Array f = new Find_Minimum_in_Rotated_Sorted_Array();
+        int[] nums = {4, 5, 6, 7,  1, 2};
+        System.out.println(f.findMin(nums));
+    }
     public int findMin(int[] nums) {
-        return bSearch(0, nums.length - 1, nums);
+        return binarySearch(0, nums.length - 1, nums);
     }
 
-    private int bSearch(int i, int j, int[] nums) {
-        int index = ((j - i) / 2) + i;
-        if (j == i) {
-            return nums[i];
+    private int binarySearch(int low, int high, int[] nums) {
+
+        int index = ((high - low) / 2) + low;
+
+        if (high == low) {
+            return nums[low];
         }
-        if (j - i == 1) {
-            return Math.min(nums[i], nums[j]);
+        if (high - low == 1) {
+            return Math.min(nums[low], nums[high]);
         }
 
-        if (nums[index] > nums[j]) {
-            i = index;
+        if (nums[index] > nums[high]) {
+            low = index;
         } else {
-            j = index;
+            high = index;
         }
-
-        return bSearch(i, j, nums);
+        return binarySearch(low, high, nums);
     }
 
 }
