@@ -18,20 +18,7 @@ public class Reverse_LinkedList {
         }
     }
 
-    public static void main(String[] args) {
-        ListNode[] list = new ListNode[5];
-        for (int i = 0; i < list.length; i++) {
-            list[i] = new ListNode();
-            list[i].val = i;
-            if (i < list.length - 1)
-                list[i].next = list[i + 1];
-        }
-        ListNode a = reverseList(list[0]);
-        while (a != null) {
-            System.out.println(a.val);
-            a = a.next;
-        }
-    }
+    
 
     public static ListNode reverseList(ListNode head) {
 

@@ -11,8 +11,4 @@ public class Contains_Duplicate { // https://leetcode.com/problems/contains-dupl
         return nums.length != set.size();
     }
 
-    public static void main(String[] args) {
-        int[] nums = {1,1,1,3,3,4,3,2,4,2};
-        System.out.println(containsDuplicate(nums));
-    }
 }

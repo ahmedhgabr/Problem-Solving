@@ -18,9 +18,6 @@ public class Best_Time_to_Buy_Stock {
         return maxProfit;
     }
 
-    public static void main(String[] args) {
-        int[] prices = {2,4,1}; // 5
-        System.out.println(maxProfit(prices));
-    }
+   
 
 }
